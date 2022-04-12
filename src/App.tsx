@@ -1,18 +1,19 @@
-import "styles/global.css";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { Provider } from "react-redux";
-import store from "redux/store";
+import { HashRouter as Router } from 'react-router-dom';
+import store from "store/store";
+import { RouteLayout } from './routes';
 
-import Home from "pages";
+import "styles/global.css";
 
-function App(): JSX.Element {
+const App: React.FC = () => {
   const queryClient = new QueryClient();
   return (
     <QueryClientProvider client={queryClient}>
       <Provider store={store}>
-        <div className="App">
-          <Home />
-        </div>
+        <Router>
+          <RouteLayout />
+        </Router>
       </Provider>
     </QueryClientProvider>
   );
