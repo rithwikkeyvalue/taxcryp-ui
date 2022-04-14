@@ -1,11 +1,11 @@
 import React from "react";
 
-import HomeContainer from "containers/home/HomeContainer";
+import Home from "@containers/home/Home";
 
-const Home: React.FC = () => {
+const HomePage: React.FC = () => {
   return (
-    <HomeContainer />
+    <Home />
   );
 };
 
-export default Home;
+export default HomePage;

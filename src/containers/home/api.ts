@@ -1,13 +1,13 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/dist/query/react";
+import baseApi from '@services/api';
 
-export const baseApi = createApi({
-  reducerPath: "baseApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3000"}),
+import { Country } from './types';
+
+const HomeBaseApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
-    getBase: builder.query<any, void>({
-      query: () => '/'
+    getCountry: builder.query<Country[], void>({
+      query: () => '/name/peru'
     })
   })
 });
 
-export const { useGetBaseQuery } = baseApi;
+export const { useGetCountryQuery } = HomeBaseApi;

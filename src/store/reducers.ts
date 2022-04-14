@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
 
-import homePageData from "containers/home/slice";
+import homePageData from "@containers/home/slice";
 
 import { store } from "./store";
 
