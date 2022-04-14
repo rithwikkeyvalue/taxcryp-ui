@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
-import baseApi from '@services/api';
+import baseApi from 'services/api';
 import { useDispatch } from 'react-redux';
 
 import rootReducer from './reducers';

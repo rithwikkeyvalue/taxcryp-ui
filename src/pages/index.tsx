@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Home from '@containers/home/Home';
+import Home from 'containers/home/Home';
 
 const HomePage: React.FC = () => {
   return <Home />;

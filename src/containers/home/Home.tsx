@@ -2,10 +2,10 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 import { RootState } from '../../store/reducers';
-import { useAppDispatch } from '@store/store';
+import { useAppDispatch } from 'store/store';
 import { useGetCountryQuery } from './api';
 import { updateValue } from './slice';
-import Button from '@components/button/Button';
+import Button from 'components/button/Button';
 
 const Home: React.FC = () => {
   const { isLoading, data: countries } = useGetCountryQuery();
