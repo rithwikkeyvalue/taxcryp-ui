@@ -12,7 +12,6 @@ const Home: React.FC = () => {
 
   const dispatch = useAppDispatch();
   const { data } = useSelector((state: RootState) => state.rootReducer.homePageData);
-  console.log('sdfsdfs', data, typeof data);
   return (
     <div className="flex flex-col items-center justify-center h-full text-4xl">
       {isLoading && <p>Loading...</p>}
