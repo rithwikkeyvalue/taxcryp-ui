@@ -9,8 +9,11 @@ const RouteLayout = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <Routes>
-        <Route path={RoutesPath.HOME} element={ <HomePage /> } />
-        <Route path={RoutesPath.DEFAULT} element={<Navigate replace to={RoutesPath.HOME} />} />
+        <Route path={RoutesPath.HOME} element={<HomePage />} />
+        <Route
+          path={RoutesPath.DEFAULT}
+          element={<Navigate replace to={RoutesPath.HOME} />}
+        />
       </Routes>
     </Suspense>
   );
