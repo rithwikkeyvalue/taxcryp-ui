@@ -2,17 +2,17 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 import { RootState } from "../../store/reducers";
-import { useAppDispatch } from "store/store";
+import { useAppDispatch } from "@store/store";
 import { useGetCountryQuery } from "./api";
 import { updateValue } from "./slice";
-import { Button } from "components";
+import Button from "@components/button/Button";
 
-const HomeContainer: React.FC = () => {
+const Home: React.FC = () => {
   const { isLoading, data: countries } = useGetCountryQuery();
-  console.log(countries, isLoading);
 
   const dispatch = useAppDispatch();
   const { data } = useSelector((state: RootState) => state.rootReducer.homePageData);
+  console.log('sdfsdfs', data, typeof data);
   return (
     <div className="flex flex-col items-center justify-center h-full text-4xl">
       {isLoading && <p>Loading...</p>}
@@ -25,7 +25,7 @@ const HomeContainer: React.FC = () => {
       </p>
       <p className="mt-10">
         {
-          countries && countries.map((country) => (<div>{country.name}</div>))
+          countries?.map((country) => (<div>{country.name}</div>))
         }
       </p>
 
@@ -33,4 +33,4 @@ const HomeContainer: React.FC = () => {
   )
 };
 
-export default HomeContainer;
+export default Home;

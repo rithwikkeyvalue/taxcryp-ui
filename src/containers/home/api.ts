@@ -1,4 +1,4 @@
-import baseApi from 'services/api';
+import baseApi from '@services/api';
 
 import { Country } from './types';
 
