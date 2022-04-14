@@ -11,7 +11,8 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:tailwindcss/recommended',
-    'prettier'
+    'prettier',
+    'plugin:storybook/recommended'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -30,7 +31,13 @@ module.exports = {
     'no-restricted-syntax': 1,
     'no-use-before-define': 0,
     'no-param-reassign': 1,
-    indent: ['error', 2, { SwitchCase: 1 }],
+    indent: [
+      'error',
+      2,
+      {
+        SwitchCase: 1
+      }
+    ],
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
     'no-console': 2,
@@ -54,6 +61,12 @@ module.exports = {
     'no-shadow': 'off',
     'no-multiple-empty-lines': 2,
     '@typescript-eslint/no-shadow': ['error'],
-    yoda: ['error', 'never', { exceptRange: true }]
+    yoda: [
+      'error',
+      'never',
+      {
+        exceptRange: true
+      }
+    ]
   }
 };
