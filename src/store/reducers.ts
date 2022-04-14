@@ -1,8 +1,8 @@
-import { combineReducers } from "redux";
+import { combineReducers } from 'redux';
 
-import homePageData from "@containers/home/slice";
+import homePageData from '@containers/home/slice';
 
-import { store } from "./store";
+import { store } from './store';
 
 const rootReducer = combineReducers({ homePageData });
 

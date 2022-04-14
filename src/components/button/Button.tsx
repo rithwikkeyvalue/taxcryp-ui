@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 
-type ButtonProps ={
-  className?: string,
-  children: React.ReactNode,
-  onClick: React.MouseEventHandler<HTMLButtonElement>,
-  disabled?: boolean
-}
+type ButtonProps = {
+  className?: string;
+  children: React.ReactNode;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  disabled?: boolean;
+};
 
 const Button: React.FC<ButtonProps> = ({
-  className = "",
+  className = '',
   onClick,
   children,
   disabled = false
@@ -18,8 +18,7 @@ const Button: React.FC<ButtonProps> = ({
       type="button"
       className={`bg-slate-300 px-5 py-3 rounded hover:bg-slate-400 text-base ${className}`}
       onClick={onClick}
-      disabled={disabled}
-    >
+      disabled={disabled}>
       {children}
     </button>
   );

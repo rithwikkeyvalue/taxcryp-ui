@@ -1,4 +1,4 @@
-const {CracoAliasPlugin} = require('react-app-alias')
+const { CracoAliasPlugin } = require('react-app-alias');
 
 module.exports = {
   plugins: [
@@ -9,7 +9,7 @@ module.exports = {
   ],
   style: {
     postcssOptions: {
-      plugins: [require("tailwindcss"), require("autoprefixer")],
-    },
-  },
+      plugins: [require('tailwindcss'), require('autoprefixer')]
+    }
+  }
 };

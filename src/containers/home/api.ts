@@ -3,7 +3,7 @@ import baseApi from '@services/api';
 import { Country } from './types';
 
 const HomeBaseApi = baseApi.injectEndpoints({
-  endpoints: (builder) => ({
+  endpoints: builder => ({
     getCountry: builder.query<Country[], void>({
       query: () => '/name/peru'
     })
